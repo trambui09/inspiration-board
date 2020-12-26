@@ -16,7 +16,6 @@ In the common Ada space, we have an Inspiration Board that asks people to take n
 This project should enable you to demonstrate learning in:
 - Using an API within a React app
 - Designing a React application with multiple interacting components
-- Creating test files with snapshot tests
 
 ## Objective
 
@@ -112,10 +111,18 @@ In wave 2 you will add API functionality.
 - Add a delete button on each card which will remove a card from the `Board` and delete it from the API.
 - Create a `NewCardForm` component which will add new cards to the board and trigger POST requests to the API to create a card on the API.
 
-### Optional Enhancements
+### Optional Wave 4 - Adding Tests
+
+Thus far the only test is on `App.test.js` just ensuring the App renders.  If you want to do some additional research, you can review tests from previous projects and write tests for each component.
+
+Some useful resources include:
+
+- [Testing Library Documentation](https://testing-library.com/docs/)
+- [How to use React Testing Library Tutorial](https://www.robinwieruch.de/react-testing-library)
+
+### Further Optional Enhancements
 
 - Allow the user to switch between boards with a drop-down list
-- Add user interaction testing
 - Allow the `NewCardForm` to post to different boards on the API.
 - Try to deploy the app on Github pages [(nice tutorial, here!)](https://codeburst.io/deploy-react-to-github-pages-to-create-an-amazing-website-42d8b09cd4d)
 
