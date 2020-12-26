@@ -12,6 +12,7 @@ In the common Ada space, we have an Inspiration Board that asks people to take n
 ![Adas inspiration Board](./images/board.jpg)
 
 ## Learning Goals
+
 This project should enable you to demonstrate learning in:
 - Using an API within a React app
 - Designing a React application with multiple interacting components
@@ -71,14 +72,13 @@ Here's an example:
 In this case, there is some "block" (section, idea, maybe component) named `new-card-form`, and this style is for the "element" that represents the header by name of `header`. This style makes the header in the new card form `text-align: center;`. Note that this does not dictate what kind of HTML tag this is, or what its parent or children are.
 </details>
 
-<br>
 Again, please limit the time you spend on styling, and reach out often and frequently.
 
 ## Setup Requirements
 
 Create a board for yourself, with a name that will be unique for you. This will be your own board to do development and manual-testing on. To do so, do the following:
 
-1. Pick your board's name. Examples include your first name, like `dee`, or your first and last name combined, like `dee-del-rosario`.
+1. Pick your board's name. Examples include your first name, like `simon`, or your first and last name combined, like `simon-del-rosario`.
 1. Use the Inspiration Board API documentation to create a specific board with a specific board name, and how to read from that specific board name.
 1. Once you've confirmed that your specific board name works as an endpoint, open up in your project files `App.js`. In this file, find and observe the following code:
     ```javascript
