@@ -11,7 +11,6 @@
 - GET request made in `componentDidMount`
 - DELETE request made in callback function
 - POST request made in callback function passed to `NewCardForm` component
-- Snapshot testing
 - Styling
 
 -->

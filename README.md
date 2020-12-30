@@ -12,10 +12,10 @@ In the common Ada space, we have an Inspiration Board that asks people to take n
 ![Adas inspiration Board](./images/board.jpg)
 
 ## Learning Goals
+
 This project should enable you to demonstrate learning in:
 - Using an API within a React app
 - Designing a React application with multiple interacting components
-- Creating test files with snapshot tests
 
 ## Objective
 
@@ -71,14 +71,13 @@ Here's an example:
 In this case, there is some "block" (section, idea, maybe component) named `new-card-form`, and this style is for the "element" that represents the header by name of `header`. This style makes the header in the new card form `text-align: center;`. Note that this does not dictate what kind of HTML tag this is, or what its parent or children are.
 </details>
 
-<br>
 Again, please limit the time you spend on styling, and reach out often and frequently.
 
 ## Setup Requirements
 
 Create a board for yourself, with a name that will be unique for you. This will be your own board to do development and manual-testing on. To do so, do the following:
 
-1. Pick your board's name. Examples include your first name, like `dee`, or your first and last name combined, like `dee-del-rosario`.
+1. Pick your board's name. Examples include your first name, like `simon`, or your first and last name combined, like `simon-del-rosario`.
 1. Use the Inspiration Board API documentation to create a specific board with a specific board name, and how to read from that specific board name.
 1. Once you've confirmed that your specific board name works as an endpoint, open up in your project files `App.js`. In this file, find and observe the following code:
     ```javascript
@@ -104,18 +103,26 @@ Note there is a package installed called [`emoji-dictionary`](https://github.com
 ### Wave 2
 
 In wave 2 you will add API functionality.
+
 - Modify the `Board` component to use `axios` to retrieve card data from the end point, using the board endpoint you configured in the setup requirements.
 
 ### Wave 3
 
 - Add a delete button on each card which will remove a card from the `Board` and delete it from the API.
 - Create a `NewCardForm` component which will add new cards to the board and trigger POST requests to the API to create a card on the API.
-- Create a shallow snapshot tests for the `Card` and `NewCardForm` components
 
-### Optional Enhancements
+### Optional Wave 4 - Adding Tests
+
+Thus far the only test is on `App.test.js` just ensuring the App renders.  If you want to do some additional research, you can review tests from previous projects and write tests for each component.
+
+Some useful resources include:
+
+- [Testing Library Documentation](https://testing-library.com/docs/)
+- [How to use React Testing Library Tutorial](https://www.robinwieruch.de/react-testing-library)
+
+### Further Optional Enhancements
 
 - Allow the user to switch between boards with a drop-down list
-- Add user interaction testing
 - Allow the `NewCardForm` to post to different boards on the API.
 - Try to deploy the app on Github pages [(nice tutorial, here!)](https://codeburst.io/deploy-react-to-github-pages-to-create-an-amazing-website-42d8b09cd4d)
 
