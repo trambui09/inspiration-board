@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 import Board from './components/Board';
+import emoji from 'emoji-dictionary';
 
 
 const App = () => {
-  const emoji = require("emoji-dictionary");
+  // const emoji = require("emoji-dictionary");
 
   return (
     <section>
