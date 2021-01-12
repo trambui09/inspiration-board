@@ -8,9 +8,13 @@ import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
 const Board = () => {
+
+  const cards = CARD_DATA
+
+
   return (
     <div>
-      <Card />
+      <Card cards={cards}/>
     </div>
   )
 };
