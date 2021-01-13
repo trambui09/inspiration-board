@@ -78,7 +78,7 @@ const Board = (props) => {
     // axios post request 
 
     // setCards to be newCards
-
+    
     axios.post(`${props.url}${props.boardName}/cards`, card)
       .then((res) => {
         const updatedData = [...cards, res.data];

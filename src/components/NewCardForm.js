@@ -43,21 +43,22 @@ const NewCardForm = (props) => {
   return (
     <form className='new-card-form' onSubmit={onFormSubmit}>
       <p className='new-card-form__header'>Submit a Card!</p>
-      <div>
-        <label className='new-card-form__form-label '>
+      <div className='new-card-form__form'>
+        <label className='new-card-form__form-label'>
           Text:
           <textarea 
             value={formFields.text} 
             name='text' 
             onChange={onFormChange} 
+            className='new-card-form__form-textarea'
           />
         </label>
       </div>
 
-      <div>
-        <label className='new-card-form__form-label '>
+      <div className='new-card-form__form'>
+        <label className='new-card-form__form-label'>
           Emoji
-          <select value={formFields.emoji} name='emoji' onChange={onFormChange}>
+          <select value={formFields.emoji} name='emoji' onChange={onFormChange} className='new-card-form__form-select'>
             <option value=''></option>
             <option value='heart_eyes'>{emoji.getUnicode('heart_eyes')}</option>
             <option value='beer'>{emoji.getUnicode('beer')}</option>
@@ -67,8 +68,6 @@ const NewCardForm = (props) => {
             <option value='dog'>{emoji.getUnicode('dog')}</option>
           </select>
         </label>
-        
-
       </div>
       <input
         type="submit"
