@@ -26,19 +26,28 @@ const Board = (props) => {
       });
   }, []);
 
+  const deleteCard = (id) => {
+    // do something
+  }
+
 
   // CARD_DATA : object, key is cards, value is arr of objects 
   // cards = array of objects
   // card = object
+  // passing down the deleteCard function to use as a callback
   const cardComponents = cards.map(singleCard => {
     return (
       <Card 
         key={singleCard.card.id}
+        id={singleCard.card.id}
         text={singleCard.card.text} 
         emojiText={singleCard.card.emoji}
+        onDeleteCard={deleteCard}
       />
     )
   })
+
+  
 
 
 
