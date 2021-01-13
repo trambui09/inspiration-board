@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
@@ -7,16 +7,40 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
-const Board = () => {
+const Board = (props) => {
+  
+
+  const [cards, setCards] = useState([])
+  const [errorMessage, setErrorMessage] = useState(null)
+
+  // use axios to grab all the cards from the API
+  // https://inspiration-board.herokuapp.com/boards/tram-bui/cards
+  useEffect(() => {
+    axios.get(`${props.url}${props.boardName}/cards`)
+      .then((res) => {
+        const apiCards = res.data;
+        setCards(apiCards)
+      })
+      .catch((err) => {
+        setErrorMessage(err.message);
+      });
+  }, []);
+
+
   // CARD_DATA : object, key is cards, value is arr of objects 
-  const cardComponents = CARD_DATA.cards.map(card => {
+  // cards = array of objects
+  // card = object
+  const cardComponents = cards.map(singleCard => {
     return (
       <Card 
-        text={card.text} 
-        emojiText={card.emoji}
+        key={singleCard.card.id}
+        text={singleCard.card.text} 
+        emojiText={singleCard.card.emoji}
       />
     )
   })
+
+
 
 
   return (
