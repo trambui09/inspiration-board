@@ -7,6 +7,8 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
+const API_CARDS_URL = 'https://inspiration-board.herokuapp.com/cards'
+
 const Board = (props) => {
   
 
@@ -27,7 +29,26 @@ const Board = (props) => {
   }, []);
 
   const deleteCard = (id) => {
-    // do something
+    // the card comp is passing up the id of the card
+    // delete to from the cards and use axios to do the delete request 
+    // need to make a new student list and filter 
+    // returning all the cards that doesn't match the id param passed in 
+    const newCards = cards.filter((card) => {
+      return card.id !== id
+    })
+
+    // change our student List AND tell axios to delete the student from our API via id
+
+    if (newCards.length < cards.length) {
+      axios.delete(`${API_CARDS_URL}/${id}`)
+        .then((res) => {
+          setErrorMessage(`Card #${id} deleted!`)
+        })
+        .catch((err) => {
+          setErrorMessage(`Unable to delete card #${id}`)
+        })
+        setCards(newCards)
+    }
   }
 
 
@@ -46,10 +67,6 @@ const Board = (props) => {
       />
     )
   })
-
-  
-
-
 
 
   return (
