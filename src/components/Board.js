@@ -33,21 +33,25 @@ const Board = (props) => {
     // delete to from the cards and use axios to do the delete request 
     // need to make a new student list and filter 
     // returning all the cards that doesn't match the id param passed in 
-    const newCards = cards.filter((card) => {
-      return card.id !== id
+
+  debugger
+
+    const newCards = cards.filter((singleCard) => {
+      return singleCard.card.id !== id;
     })
 
     // change our student List AND tell axios to delete the student from our API via id
-
+    // not going into this conditional because the newCards length is the same as the cards length 
+    // the DS is a layer deeper than I thought, it's singleCard.card.id not card.id
     if (newCards.length < cards.length) {
       axios.delete(`${API_CARDS_URL}/${id}`)
-        .then((res) => {
-          setErrorMessage(`Card #${id} deleted!`)
-        })
-        .catch((err) => {
-          setErrorMessage(`Unable to delete card #${id}`)
-        })
-        setCards(newCards)
+      .then((res) => {
+        setErrorMessage(`Card #${id} deleted!`)
+      })
+      .catch((err) => {
+        setErrorMessage(`Unable to delete card #${id}`)
+      })
+      setCards(newCards)
     }
   }
 
