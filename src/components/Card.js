@@ -4,12 +4,12 @@ import emoji from 'emoji-dictionary';
 
 import './Card.css';
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div className="card">
       <div className="card__content">
-        <p className="card__content-text">You got this Tram!</p>
-        <p className="card__content-emoji">{emoji.getUnicode("beer")}</p>
+        <p className="card__content-text">{props.text}</p>
+        <p className="card__content-emoji">{emoji.getUnicode(`${props.emojiText}`)}</p>
       </div>
     </div>
   )
