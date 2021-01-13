@@ -12,22 +12,45 @@ const NewCardForm = () => {
     emoji: '',
   });
 
+  // onChange function 
+
+  const onFormChange = (event) => {
+
+    const {name, value} = event.target
+
+    const newFields = {
+      ...formFields
+    }
+
+    newFields[name] = value
+    setFormFields(newFields)
+
+  }
+
+  // onSubmit function pass up the formFields to the board component
+
+  const onFormSubmit = () => {
+
+  }
+
   return (
-    <form className='new-card-form'>
+    <form className='new-card-form' onSubmit={onFormSubmit}>
       <p className='new-card-form__header'>Submit a Card!</p>
       <div>
         <label className='new-card-form__form-label '>
           Text:
-          <textarea  />
+          <textarea 
+            value={formFields.text} 
+            name='text' 
+            onChange={onFormChange} 
+          />
         </label>
-        
-
       </div>
 
       <div>
         <label className='new-card-form__form-label '>
           Emoji
-          <select>
+          <select value={formFields.emoji} name='emoji' onChange={onFormChange}>
             <option value=''></option>
             <option value='heart_eyes'>{emoji.getUnicode('heart_eyes')}</option>
             <option value='beer'>{emoji.getUnicode('beer')}</option>
