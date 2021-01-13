@@ -70,8 +70,24 @@ const Board = (props) => {
     )
   })
 
-  const addCard = () => {
+  const addCard = (card) => {
+    // generate a new id , won't the post request generate an id for us already?
 
+    // copy the old cards array in here
+
+    // axios post request 
+
+    // setCards to be newCards
+
+    axios.post(`${props.url}${props.boardName}/cards`, card)
+      .then((res) => {
+        const updatedData = [...cards, res.data];
+        setCards(updatedData)
+        setErrorMessage('')
+      })
+      .catch((err) => {
+        setErrorMessage(errorMessage)
+      });
   }
 
 
