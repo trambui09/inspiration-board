@@ -34,8 +34,6 @@ const Board = (props) => {
     // need to make a new student list and filter 
     // returning all the cards that doesn't match the id param passed in 
 
-  debugger
-
     const newCards = cards.filter((singleCard) => {
       return singleCard.card.id !== id;
     })
@@ -75,6 +73,7 @@ const Board = (props) => {
 
   return (
     <div>
+      <NewCardForm />
       {cardComponents}
     </div>
   )
