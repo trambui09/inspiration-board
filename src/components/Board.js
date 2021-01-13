@@ -70,10 +70,14 @@ const Board = (props) => {
     )
   })
 
+  const addCard = () => {
+
+  }
+
 
   return (
     <div>
-      <NewCardForm />
+      <NewCardForm onAddCard={addCard}/>
       {cardComponents}
     </div>
   )

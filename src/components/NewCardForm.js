@@ -5,7 +5,7 @@ import './NewCardForm.css';
 
 const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
 
-const NewCardForm = () => {
+const NewCardForm = (props) => {
 
   const [formFields, setFormFields] = useState({
     text: '',
@@ -29,8 +29,15 @@ const NewCardForm = () => {
 
   // onSubmit function pass up the formFields to the board component
 
-  const onFormSubmit = () => {
+  const onFormSubmit = (event) => {
+    event.preventDefault();
 
+    props.onAddCard(formFields)
+
+    setFormFields({
+      text: '',
+      emoji: '',
+    })
   }
 
   return (
@@ -68,8 +75,6 @@ const NewCardForm = () => {
         value="Add Card"
         className='new-card-form__form-button'
       />
-
-
     </form>
 
   )
