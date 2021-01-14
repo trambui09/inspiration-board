@@ -8,25 +8,6 @@ import axios from 'axios';
 
 const App = () => {
 
-  // should app keep track of all the boards?
-
-  const [boardList, setBoardList] = useState([])
-  const [errorMessage, setErrorMessage] = useState(null)
-
-
-  useEffect(() => {
-    axios.get('https://inspiration-board.herokuapp.com/boards/')
-      .then((res) => {
-        const apiBoards = res.data;
-        setBoardList(apiBoards)
-      })
-      .catch((err) => {
-        setErrorMessage(err.message);
-      });
-  }, []);
-
-
-
   return (
     <section>
       <header className="header">
