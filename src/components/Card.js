@@ -8,21 +8,21 @@ import './Card.css';
 const Card = (props) => {
   return (
     <div className="card">
-      <div className="card__content">
+      <section className="card__content">
         <p className="card__content-text">{props.text}</p>
-        <p className="card__content-emoji">{emoji.getUnicode(`${props.emojiText}`)}</p>
-      </div>
-      <button onClick={() => props.onDeleteCard(props.id)} className='card__delete'>
+        <p className="card__content-emoji">{props.emojiText ? emoji.getUnicode(`${props.emojiText}`) : ''}</p>
+      </section>
+      <button  className = "card__delete" onClick={() => props.onDeleteCard(props.id)}>
         Delete
       </button>
-    </div>
+    </div>    
   )
 }
 
 Card.propTypes = {
   id: PropTypes.number.isRequired,
-  text: PropTypes.string.isRequired,
-  emojiText: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  emojiText: PropTypes.string,
   onDeleteCard: PropTypes.func.isRequired
 };
 
