@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/inspiration-board/static/css/main.503c2219.chunk.css",
-    "main.js": "/inspiration-board/static/js/main.0385c06e.chunk.js",
-    "main.js.map": "/inspiration-board/static/js/main.0385c06e.chunk.js.map",
+    "main.css": "/inspiration-board/static/css/main.f489c2a5.chunk.css",
+    "main.js": "/inspiration-board/static/js/main.3d613fab.chunk.js",
+    "main.js.map": "/inspiration-board/static/js/main.3d613fab.chunk.js.map",
     "runtime-main.js": "/inspiration-board/static/js/runtime-main.7e5e85d8.js",
     "runtime-main.js.map": "/inspiration-board/static/js/runtime-main.7e5e85d8.js.map",
-    "static/js/2.aecaf52d.chunk.js": "/inspiration-board/static/js/2.aecaf52d.chunk.js",
-    "static/js/2.aecaf52d.chunk.js.map": "/inspiration-board/static/js/2.aecaf52d.chunk.js.map",
+    "static/js/2.cbe7c4df.chunk.js": "/inspiration-board/static/js/2.cbe7c4df.chunk.js",
+    "static/js/2.cbe7c4df.chunk.js.map": "/inspiration-board/static/js/2.cbe7c4df.chunk.js.map",
     "index.html": "/inspiration-board/index.html",
-    "static/css/main.503c2219.chunk.css.map": "/inspiration-board/static/css/main.503c2219.chunk.css.map",
-    "static/js/2.aecaf52d.chunk.js.LICENSE.txt": "/inspiration-board/static/js/2.aecaf52d.chunk.js.LICENSE.txt"
+    "static/css/main.f489c2a5.chunk.css.map": "/inspiration-board/static/css/main.f489c2a5.chunk.css.map",
+    "static/js/2.cbe7c4df.chunk.js.LICENSE.txt": "/inspiration-board/static/js/2.cbe7c4df.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7e5e85d8.js",
-    "static/js/2.aecaf52d.chunk.js",
-    "static/css/main.503c2219.chunk.css",
-    "static/js/main.0385c06e.chunk.js"
+    "static/js/2.cbe7c4df.chunk.js",
+    "static/css/main.f489c2a5.chunk.css",
+    "static/js/main.3d613fab.chunk.js"
   ]
 }
