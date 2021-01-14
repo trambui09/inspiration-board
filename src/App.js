@@ -10,6 +10,7 @@ const App = () => {
 
   const [boardList, setBoardList] = useState([]);
   const [errorMessage, setErrorMessage] = useState(null)
+  const [currentBoard, setCurrentBoard] = useState('tram-bui')
 
   useEffect(() => {
     axios.get('https://inspiration-board.herokuapp.com/boards')
@@ -33,6 +34,18 @@ const App = () => {
     boardNames.push(<option value={board.name}> {board.name} </option>)
   )
 
+  const switchBoard = (event) => {
+    event.preventDefault();
+    debugger
+
+    setCurrentBoard(event.target.value)
+  
+  }
+
+  useEffect(() => {
+
+  }, [currentBoard])
+
 
   return (
     <section>
@@ -40,14 +53,14 @@ const App = () => {
         <h1 className="header__h1"><span className="header__text"> Inspiration Board</span></h1>
       </header>
       <form>
-        <label>Boards:</label>
-        <select>
+        <label>Current Board:</label>
+        <select value={currentBoard} onChange={switchBoard}>
           {boardNames}
         </select>
       </form>
       <Board
         url="https://inspiration-board.herokuapp.com/boards/"
-        boardName={`tram-bui`}
+        boardName={currentBoard}
       />
     </section>
   );

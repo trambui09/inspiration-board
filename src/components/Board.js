@@ -25,7 +25,7 @@ const Board = (props) => {
       .catch((err) => {
         setErrorMessage(err.message);
       });
-  }, []);
+  }, [props.boardName]);
 
   const deleteCard = (id) => {
     
