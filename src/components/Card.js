@@ -4,7 +4,6 @@ import emoji from 'emoji-dictionary';
 
 import './Card.css';
 
-// Wave 3: add a delete button on each card
 
 const Card = (props) => {
   return (

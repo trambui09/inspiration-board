@@ -12,10 +12,7 @@ const NewCardForm = (props) => {
     emoji: '',
   });
 
-  // onChange function 
-
   const onFormChange = (event) => {
-
     const {name, value} = event.target
 
     const newFields = {
@@ -24,10 +21,7 @@ const NewCardForm = (props) => {
 
     newFields[name] = value
     setFormFields(newFields)
-
   }
-
-  // onSubmit function pass up the formFields to the board component
 
   const onFormSubmit = (event) => {
     event.preventDefault();
