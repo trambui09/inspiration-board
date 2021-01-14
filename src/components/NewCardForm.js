@@ -80,7 +80,7 @@ const NewCardForm = (props) => {
 }
 
 NewCardForm.propTypes = {
-
+  onAddCard: PropTypes.func.isRequired
 }
 
 export default NewCardForm;
