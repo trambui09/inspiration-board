@@ -74,10 +74,12 @@ const Board = (props) => {
 
 
   return (
-    <div classname="board">
-      <NewCardForm onAddCard={addCard}/>
+    <>
+    <NewCardForm onAddCard={addCard}/>
+    <div className="board">
       {cardComponents}
     </div>
+    </>
   )
 };
 Board.propTypes = {
