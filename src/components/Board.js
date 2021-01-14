@@ -92,14 +92,15 @@ const Board = (props) => {
 
 
   return (
-    <div>
+    <div classname="board">
       <NewCardForm onAddCard={addCard}/>
       {cardComponents}
     </div>
   )
 };
 Board.propTypes = {
-
+  url: PropTypes.string.isRequired,
+  boardName: PropTypes.string.isRequired
 };
 
 export default Board;

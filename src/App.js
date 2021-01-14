@@ -5,7 +5,6 @@ import emoji from 'emoji-dictionary';
 
 
 const App = () => {
-  // const emoji = require("emoji-dictionary");
 
   return (
     <section>
