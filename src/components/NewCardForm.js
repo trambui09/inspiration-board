@@ -3,10 +3,16 @@ import PropTypes from 'prop-types';
 import emoji from 'emoji-dictionary';
 import './NewCardForm.css';
 
-const EMOJI_LIST = ["", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
+const EMOJI_LIST = [" ", "heart_eyes", "beer", "clap", "sparkling_heart", "heart_eyes_cat", "dog"]
 
 const NewCardForm = (props) => {
 
+  const emojiList = []
+    
+  EMOJI_LIST.map(singleEmoji => 
+    emojiList.push(<option value={singleEmoji}> {emoji.getUnicode(`${singleEmoji}`)} </option>)
+  )
+  
   const [formFields, setFormFields] = useState({
     text: '',
     emoji: '',
@@ -52,14 +58,8 @@ const NewCardForm = (props) => {
       <div className='new-card-form__form'>
         <label className='new-card-form__form-label'>
           Emoji
-          <select value={formFields.emoji} name='emoji' onChange={onFormChange} className='new-card-form__form-select'>
-            <option value=''></option>
-            <option value='heart_eyes'>{emoji.getUnicode('heart_eyes')}</option>
-            <option value='beer'>{emoji.getUnicode('beer')}</option>
-            <option value='clap'>{emoji.getUnicode('clap')}</option>
-            <option value='sparkling_heart'>{emoji.getUnicode('sparkling_heart')}</option>
-            <option value='heart_eyes_cat'>{emoji.getUnicode('heart_eyes_cat')}</option>
-            <option value='dog'>{emoji.getUnicode('dog')}</option>
+          <select value={formFields.emoji} name='emoji' onChange={onFormChange} className='new-card-form__form-select' >
+            {emojiList}
           </select>
         </label>
       </div>
