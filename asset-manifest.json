@@ -1,6 +1,20 @@
 {
-  "main.css": "static/css/main.a745919b.css",
-  "main.css.map": "static/css/main.a745919b.css.map",
-  "main.js": "static/js/main.80faf53e.js",
-  "main.js.map": "static/js/main.80faf53e.js.map"
+  "files": {
+    "main.css": "/inspiration-board/static/css/main.503c2219.chunk.css",
+    "main.js": "/inspiration-board/static/js/main.0385c06e.chunk.js",
+    "main.js.map": "/inspiration-board/static/js/main.0385c06e.chunk.js.map",
+    "runtime-main.js": "/inspiration-board/static/js/runtime-main.7e5e85d8.js",
+    "runtime-main.js.map": "/inspiration-board/static/js/runtime-main.7e5e85d8.js.map",
+    "static/js/2.aecaf52d.chunk.js": "/inspiration-board/static/js/2.aecaf52d.chunk.js",
+    "static/js/2.aecaf52d.chunk.js.map": "/inspiration-board/static/js/2.aecaf52d.chunk.js.map",
+    "index.html": "/inspiration-board/index.html",
+    "static/css/main.503c2219.chunk.css.map": "/inspiration-board/static/css/main.503c2219.chunk.css.map",
+    "static/js/2.aecaf52d.chunk.js.LICENSE.txt": "/inspiration-board/static/js/2.aecaf52d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7e5e85d8.js",
+    "static/js/2.aecaf52d.chunk.js",
+    "static/css/main.503c2219.chunk.css",
+    "static/js/main.0385c06e.chunk.js"
+  ]
 }
