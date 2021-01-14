@@ -42,7 +42,7 @@ const NewCardForm = (props) => {
 
   return (
     <form className='new-card-form' onSubmit={onFormSubmit}>
-      <p className='new-card-form__header'>Submit a Card!</p>
+      <p className='new-card-form__header'>Submit a Card to the Current Board!</p>
       <div className='new-card-form__form'>
         <label className='new-card-form__form-label'>
           Text:

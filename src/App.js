@@ -36,10 +36,8 @@ const App = () => {
 
   const switchBoard = (event) => {
     event.preventDefault();
-    debugger
 
     setCurrentBoard(event.target.value)
-  
   }
 
   useEffect(() => {
@@ -52,7 +50,7 @@ const App = () => {
       <header className="header">
         <h1 className="header__h1"><span className="header__text"> Inspiration Board</span></h1>
       </header>
-      <form>
+      <form className='new-board'>
         <label>Current Board:</label>
         <select value={currentBoard} onChange={switchBoard}>
           {boardNames}
